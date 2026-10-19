@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yasir Pahadi — Web Developer, AI Builder, Filmmaker & Designer. A portfolio of craft across code, intelligence, cinema, and art." />
+  <meta name="theme-color" content="#03050a" />
+  <title>YasirPahadi</title>
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+</head>
+<body>
+
+  <!-- AMBIENT LIGHTS -->
+  <div class="ambient-light" id="ambient-1" aria-hidden="true"></div>
+  <div class="ambient-light" id="ambient-2" aria-hidden="true"></div>
+  <div class="ambient-light" id="ambient-3" aria-hidden="true"></div>
+
+  <!-- CURSOR -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"></div>
+
+  <!-- INTRO SCREEN --> 
+   
+  <div id="intro-screen" role="presentation" aria-hidden="true">
+    <div class="intro-bg"></div>
+    <div class="intro-lightning" id="intro-lightning">
+      <div class="intro-flash"></div>
+      <div class="intro-bolt-wrap">
+        <svg viewBox="0 0 60 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <polyline
+            points="32,0 14,160 30,160 10,330 34,330 6,500 28,500 0,600"
+            fill="none" stroke="rgba(230,220,255,0.95)" stroke-width="3"
+            stroke-linejoin="round" stroke-linecap="round"/>
+          <polyline
+            points="32,0 14,160 30,160 10,330 34,330 6,500 28,500 0,600"
+            fill="none" stroke="white" stroke-width="1.2"
+            stroke-linejoin="round" stroke-linecap="round" opacity="0.85"/>
+        </svg>
+      </div>
+    </div>
+    <div class="intro-line-top"></div>
+    <div class="intro-text-wrapper">
+      <span class="intro-letter">Y</span><span class="intro-letter">A</span><span class="intro-letter">S</span><span class="intro-letter">I</span><span class="intro-letter">R</span><span class="intro-letter" style="margin-right:0.18em"> </span><span class="intro-letter">P</span><span class="intro-letter">A</span><span class="intro-letter">H</span><span class="intro-letter">A</span><span class="intro-letter">D</span><span class="intro-letter">I</span>
+      <div class="intro-light-sweep"></div>
+    </div>
+    <div class="intro-line-bottom"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo">Y<span>.</span>Pahadi</a>
+    <div class="nav-links" role="list">
+      <a href="#about" class="nav-link" role="listitem">About</a>
+      <a href="#webdev" class="nav-link" role="listitem">Dev</a>
+      <a href="#ai" class="nav-link" role="listitem">AI</a>
+      <a href="#filmmaking" class="nav-link" role="listitem">Film</a>
+      <a href="#design3d" class="nav-link" role="listitem">Design</a>
+      <a href="#projects" class="nav-link" role="listitem">Projects</a>
+      <a href="#contact" class="nav-cta" role="listitem">Contact</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-mobile" role="dialog" aria-label="Mobile navigation">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#webdev" class="nav-link">Web Dev</a>
+    <a href="#ai" class="nav-link">AI & ML</a>
+    <a href="#filmmaking" class="nav-link">Filmmaking</a>
+    <a href="#design3d" class="nav-link">Design & 3D</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section id="hero" aria-labelledby="hero-name">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-content container">
+      <div class="hero-status" role="status">
+        <div class="hero-status-dot"></div>
+        <span>Available for collaboration</span>
+      </div>
+
+      <h1 class="hero-name" id="hero-name">
+        Yasir<br /><em>Pahadi</em>
+      </h1>
+
+      <div class="hero-descriptor">
+        <span class="hero-descriptor-item">Web Developer</span>
+        <span class="hero-descriptor-sep" aria-hidden="true"></span>
+        <span class="hero-descriptor-item">AI Builder</span>
+        <span class="hero-descriptor-sep" aria-hidden="true"></span>
+        <span class="hero-descriptor-item">Filmmaker</span>
+        <span class="hero-descriptor-sep" aria-hidden="true"></span>
+        <span class="hero-descriptor-item">Designer</span>
+      </div>
+
+      <div class="hero-bottom">
+        <p class="hero-tagline">
+          I build things at the intersection of <strong>technology</strong>,<br />
+          <strong>intelligence</strong>, and <strong>human expression</strong>.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">
+            View Work
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn-secondary">Get in touch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-coords" aria-hidden="true">34.0522° N — 118.2437° W</div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════ -->
+  <section id="about" class="section" aria-labelledby="about-title" data-accent="#4f9eff">
+    <div class="container">
+      <div class="section-label reveal">About</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="reveal">
+            I'm Yasir — a creator operating across multiple disciplines. I began with code,
+            expanded into machine intelligence, found my voice in cinema, and ground everything in
+            visual design. Each field feeds the others.
+          </p>
+          <p class="reveal reveal-delay-1">
+            My work sits at rare intersections: films driven by algorithmic thinking, interfaces
+            built with cinematic intuition, AI experiments that feel human. I'm not interested in
+            being a specialist; I'm interested in being deeply fluent across the things that matter.
+          </p>
+          <p class="reveal reveal-delay-2">
+            Currently building personal projects in AI-assisted filmmaking, generative design, and
+            next-generation web experiences. Always learning, always shipping.
+          </p>
+          <div class="about-domains reveal reveal-delay-3">
+            <span class="tag" style="border-color:rgba(79,158,255,0.25);color:rgba(79,158,255,0.7)">Web Development</span>
+            <span class="tag" style="border-color:rgba(167,139,250,0.25);color:rgba(167,139,250,0.7)">AI & ML</span>
+            <span class="tag" style="border-color:rgba(255,140,90,0.25);color:rgba(255,140,90,0.7)">Filmmaking</span>
+            <span class="tag" style="border-color:rgba(52,211,153,0.25);color:rgba(52,211,153,0.7)">Design & 3D</span>
+          </div>
+        </div>
+        <div class="about-stats stagger-children">
+          <div class="stat-card">
+            <div class="stat-number">4+</div>
+            <div class="stat-label">Years building</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">30+</div>
+            <div class="stat-label">Projects shipped</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Creative domains</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Ideas in queue</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       WEB DEVELOPMENT
+  ═══════════════════════════════════════ -->
+  <section id="webdev" class="section domain-section" aria-labelledby="webdev-title" data-accent="#4f9eff">
+    <div class="container">
+      <div class="domain-header">
+        <div>
+          <div class="domain-accent-bar" style="background: var(--accent-web);" aria-hidden="true"></div>
+          <div class="section-label reveal" style="color: var(--accent-web)">01 — Web Development</div>
+          <h2 class="section-title reveal" id="webdev-title">
+            Crafting digital<br />experiences
+          </h2>
+        </div>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Full-stack development with a designer's eye. I build interfaces that feel inevitable — 
+          where every interaction has intention.
+        </p>
+      </div>
+
+      <div class="webdev-grid stagger-children">
+        <!-- Card 1 -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background: linear-gradient(135deg, #0a1628, #1a2d4a);"></div>
+            <div class="project-thumb-inner">
+              <span class="project-thumb-icon">⬡</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Full Stack · SaaS</div>
+            <h3 class="project-title">Dashboard Platform</h3>
+            <p class="project-desc">A real-time analytics dashboard with modular widget system, live data streams, and role-based access control.</p>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Postgres</span>
+              <span class="tag">WebSocket</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background: linear-gradient(135deg, #0d1f1a, #132e24);"></div>
+            <div class="project-thumb-inner">
+              <span class="project-thumb-icon">◈</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Frontend · Motion</div>
+            <h3 class="project-title">Creative Agency Site</h3>
+            <p class="project-desc">Award-worthy agency website featuring scroll-driven animations, WebGL backgrounds, and immersive storytelling.</p>
+            <div class="project-tags">
+              <span class="tag">GSAP</span>
+              <span class="tag">Three.js</span>
+              <span class="tag">GLSL</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="project-card">
+          <div class="project-thumb">
+            <div class="project-thumb-bg" style="background: linear-gradient(135deg, #1a1020, #2a1540);"></div>
+            <div class="project-thumb-inner">
+              <span class="project-thumb-icon">◻</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">E-Commerce · UI</div>
+            <h3 class="project-title">Luxury Storefront</h3>
+            <p class="project-desc">High-end product showcase with cinematic transitions, 3D product viewer, and seamless checkout flow.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Shopify</span>
+              <span class="tag">Framer Motion</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       AI & MACHINE LEARNING
+  ═══════════════════════════════════════ -->
+  <section id="ai" class="section domain-section" aria-labelledby="ai-title" data-accent="#a78bfa">
+    <div class="container">
+      <div class="domain-accent-bar" style="background: var(--accent-ai);" aria-hidden="true"></div>
+      <div class="section-label reveal" style="color: var(--accent-ai)">02 — AI & Machine Learning</div>
+      <div class="ai-layout">
+        <div>
+          <h2 class="section-title reveal" id="ai-title">
+            Intelligence<br />as material
+          </h2>
+          <p class="ai-intro reveal reveal-delay-1">
+            I treat AI not as a tool but as a <span>creative medium</span> — 
+            something to think with, build with, and push against.
+          </p>
+          <p class="section-subtitle reveal reveal-delay-2" style="max-width:480px">
+            Exploring language models, computer vision, generative systems, and the space 
+            where machine intelligence meets human creativity.
+          </p>
+
+          <div class="ai-experiments stagger-children" style="margin-top: var(--space-xl);">
+            <div class="experiment-card">
+              <span class="experiment-status status-active">Active</span>
+              <h3 class="experiment-name">Scene Intelligence</h3>
+              <p class="project-desc" style="font-size:var(--text-xs)">AI-powered film scene analyzer that extracts mood, composition, and narrative beats from footage.</p>
+            </div>
+            <div class="experiment-card">
+              <span class="experiment-status status-building">Building</span>
+              <h3 class="experiment-name">Prompt Sculptor</h3>
+              <p class="project-desc" style="font-size:var(--text-xs)">A tool for crafting and evolving prompts through iterative refinement and semantic drift.</p>
+            </div>
+            <div class="experiment-card">
+              <span class="experiment-status status-research">Research</span>
+              <h3 class="experiment-name">Style Transfer Net</h3>
+              <p class="project-desc" style="font-size:var(--text-xs)">Exploring cross-modal style transfer between cinematographic and photographic aesthetics.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ai-stack reveal reveal-delay-2">
+          <h3 style="font-family:'DM Sans',sans-serif;font-size:var(--text-xs);letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:var(--space-md)">Stack & Tools</h3>
+          <div class="ai-stack-item">
+            <div>
+              <div class="ai-stack-name">Python / PyTorch</div>
+              <div class="ai-stack-sub">Core ML framework</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 8h8M9 5l3 3-3 3" stroke="rgba(255,255,255,0.2)" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="ai-stack-item">
+            <div>
+              <div class="ai-stack-name">Hugging Face</div>
+              <div class="ai-stack-sub">Transformers & models</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 8h8M9 5l3 3-3 3" stroke="rgba(255,255,255,0.2)" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="ai-stack-item">
+            <div>
+              <div class="ai-stack-name">LangChain / LLMs</div>
+              <div class="ai-stack-sub">Language applications</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 8h8M9 5l3 3-3 3" stroke="rgba(255,255,255,0.2)" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="ai-stack-item">
+            <div>
+              <div class="ai-stack-name">Stable Diffusion</div>
+              <div class="ai-stack-sub">Generative image models</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 8h8M9 5l3 3-3 3" stroke="rgba(255,255,255,0.2)" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="ai-stack-item">
+            <div>
+              <div class="ai-stack-name">FastAPI / Deployment</div>
+              <div class="ai-stack-sub">Model serving & APIs</div>
+            </div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 8h8M9 5l3 3-3 3" stroke="rgba(255,255,255,0.2)" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FILMMAKING & STORYTELLING
+  ═══════════════════════════════════════ -->
+  <section id="filmmaking" class="section domain-section" aria-labelledby="film-title" data-accent="#ff8c5a">
+    <div class="container">
+      <div class="domain-accent-bar" style="background: var(--accent-film);" aria-hidden="true"></div>
+      <div class="section-label reveal" style="color: var(--accent-film)">03 — Filmmaking & Storytelling</div>
+
+      <div class="domain-header">
+        <div>
+          <h2 class="section-title reveal" id="film-title">
+            Stories that<br />linger
+          </h2>
+        </div>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Cinema is the most complete art form — it commands time, space, light, and emotion simultaneously.
+          I make films about quiet truths.
+        </p>
+      </div>
+
+      <div class="film-grid stagger-children">
+        <!-- Featured -->
+        <article class="film-card film-card--featured">
+          <div class="film-backdrop" style="font-size:6rem;background:linear-gradient(135deg,#1a0f08,#2d1a10)">🎞</div>
+          <div class="film-overlay">
+            <div class="film-genre">Short Film · Drama</div>
+            <h3 class="film-title">The Last Signal</h3>
+            <p class="film-meta">2024 · 12 min · Written & Directed</p>
+          </div>
+        </article>
+
+        <!-- Grid items -->
+        <article class="film-card">
+          <div class="film-backdrop" style="font-size:3rem;background:linear-gradient(135deg,#0f1a1a,#152828)">🌊</div>
+          <div class="film-overlay">
+            <div class="film-genre">Documentary</div>
+            <h3 class="film-title">Echoes of Still Water</h3>
+            <p class="film-meta">2023 · 8 min</p>
+          </div>
+        </article>
+
+        <article class="film-card">
+          <div class="film-backdrop" style="font-size:3rem;background:linear-gradient(135deg,#1a1208,#2d1f0a)">🌅</div>
+          <div class="film-overlay">
+            <div class="film-genre">Experimental</div>
+            <h3 class="film-title">Meridian Light</h3>
+            <p class="film-meta">2024 · 5 min</p>
+          </div>
+        </article>
+
+        <article class="film-card">
+          <div class="film-backdrop" style="font-size:3rem;background:linear-gradient(135deg,#0f0f1a,#1a1a2d)">🏙</div>
+          <div class="film-overlay">
+            <div class="film-genre">Music Video</div>
+            <h3 class="film-title">City Frequency</h3>
+            <p class="film-meta">2023 · 3:45</p>
+          </div>
+        </article>
+
+        <article class="film-card">
+          <div class="film-backdrop" style="font-size:3rem;background:linear-gradient(135deg,#1a0a0a,#2d1010)">🔥</div>
+          <div class="film-overlay">
+            <div class="film-genre">Short Film</div>
+            <h3 class="film-title">Ember Season</h3>
+            <p class="film-meta">2024 · 7 min</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       DESIGN & 3D ART
+  ═══════════════════════════════════════ -->
+  <section id="design3d" class="section domain-section" aria-labelledby="design-title" data-accent="#34d399">
+    <div class="container">
+      <div class="domain-accent-bar" style="background: var(--accent-design);" aria-hidden="true"></div>
+      <div class="section-label reveal" style="color: var(--accent-design)">04 — Design & 3D Art</div>
+
+      <div class="domain-header">
+        <div>
+          <h2 class="section-title reveal" id="design-title">
+            Form follows<br />feeling
+          </h2>
+        </div>
+        <p class="section-subtitle reveal reveal-delay-2">
+          I design systems and make objects — brand identities, motion pieces, 
+          3D sculptures, and visual experiments.
+        </p>
+      </div>
+
+      <div class="design-masonry stagger-children">
+        <div class="design-item" style="background: linear-gradient(135deg, #0a1a14, #122c20);">
+          <div class="design-bg">🌿</div>
+          <div class="design-info">
+            <div class="design-name">Organic Forms Series</div>
+            <div class="design-type">3D · Blender</div>
+          </div>
+        </div>
+        <div class="design-item" style="background: linear-gradient(135deg, #0f0a1a, #1a1030);">
+          <div class="design-bg">◉</div>
+          <div class="design-info">
+            <div class="design-name">Brand System</div>
+            <div class="design-type">Identity · Figma</div>
+          </div>
+        </div>
+        <div class="design-item" style="background: linear-gradient(135deg, #1a0f08, #2d1a10);">
+          <div class="design-bg">⬡</div>
+          <div class="design-info">
+            <div class="design-name">Hex Lattice</div>
+            <div class="design-type">3D · Cinema 4D</div>
+          </div>
+        </div>
+        <div class="design-item" style="background: linear-gradient(135deg, #081a1a, #102828);">
+          <div class="design-bg">🌊</div>
+          <div class="design-info">
+            <div class="design-name">Fluid Dynamics</div>
+            <div class="design-type">Motion · After Effects</div>
+          </div>
+        </div>
+        <div class="design-item" style="background: linear-gradient(135deg, #1a1a08, #2d2d10);">
+          <div class="design-bg">✦</div>
+          <div class="design-info">
+            <div class="design-name">Star Architecture</div>
+            <div class="design-type">3D · Houdini</div>
+          </div>
+        </div>
+        <div class="design-item" style="background: linear-gradient(135deg, #0a0f1a, #101828);">
+          <div class="design-bg">◻</div>
+          <div class="design-info">
+            <div class="design-name">Minimal Structures</div>
+            <div class="design-type">Visual · Figma</div>
+          </div>
+        </div>
+        <div class="design-item" style="background: linear-gradient(135deg, #1a080f, #2d1018);">
+          <div class="design-bg">💎</div>
+          <div class="design-info">
+            <div class="design-name">Crystal Geometry</div>
+            <div class="design-type">3D · Blender</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ALL PROJECTS
+  ═══════════════════════════════════════ -->
+  <section id="projects" class="section" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="section-label reveal">Selected Work</div>
+      <h2 class="section-title reveal" id="projects-title">All Projects</h2>
+
+      <div class="filter-bar reveal reveal-delay-1" role="group" aria-label="Filter projects">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="ai">AI & ML</button>
+        <button class="filter-btn" data-filter="film">Filmmaking</button>
+        <button class="filter-btn" data-filter="design">Design & 3D</button>
+      </div>
+
+      <div class="projects-grid stagger-children">
+        <div class="proj-card" data-category="web" style="--proj-accent: var(--accent-web)">
+          <div class="proj-num">01 / WEB</div>
+          <h3 class="proj-name">Dashboard Platform</h3>
+          <p class="proj-desc">Real-time SaaS dashboard with live analytics and modular widget system.</p>
+          <div class="proj-footer">
+            <div class="project-tags"><span class="tag">Next.js</span><span class="tag">Postgres</span></div>
+            <a href="#" class="proj-link" aria-label="View Dashboard Platform project">View →</a>
+          </div>
+        </div>
+
+        <div class="proj-card" data-category="ai" style="--proj-accent: var(--accent-ai)">
+          <div class="proj-num">02 / AI</div>
+          <h3 class="proj-name">Scene Intelligence</h3>
+          <p class="proj-desc">AI analyzer that extracts mood, composition, and narrative beats from film footage.</p>
+          <div class="proj-footer">
+            <div class="project-tags"><span class="tag">PyTorch</span><span class="tag">CV</span></div>
+            <a href="#" class="proj-link" aria-label="View Scene Intelligence project">View →</a>
+          </div>
+        </div>
+
+        <div class="proj-card" data-category="film" style="--proj-accent: var(--accent-film)">
+          <div class="proj-num">03 / FILM</div>
+          <h3 class="proj-name">The Last Signal</h3>
+          <p class="proj-desc">Award-winning short film exploring human connection through the lens of obsolete technology.</p>
+          <div class="proj-footer">
+            <div class="project-tags"><span class="tag">Drama</span><span class="tag">12 min</span></div>
+            <a href="#" class="proj-link" aria-label="View The Last Signal film">Watch →</a>
+          </div>
+        </div>
+
+        <div class="proj-card" data-category="design" style="--proj-accent: var(--accent-design)">
+          <div class="proj-num">04 / DESIGN</div>
+          <h3 class="proj-name">Organic Forms</h3>
+          <p class="proj-desc">3D sculpture series exploring the geometry of natural growth patterns.</p>
+          <div class="proj-footer">
+            <div class="project-tags"><span class="tag">Blender</span><span class="tag">3D</span></div>
+            <a href="#" class="proj-link" aria-label="View Organic Forms design project">View →</a>
+          </div>
+        </div>
+
+        <div class="proj-card" data-category="web" style="--proj-accent: var(--accent-web)">
+          <div class="proj-num">05 / WEB</div>
+          <h3 class="proj-name">Creative Agency Site</h3>
+          <p class="proj-desc">Immersive agency website with WebGL backgrounds and scroll-driven narratives.</p>
+          <div class="proj-footer">
+            <div class="project-tags"><span class="tag">GSAP</span><span class="tag">Three.js</span></div>
+            <a href="#" class="proj-link" aria-label="View Creative Agency Site project">View →</a>
+          </div>
+        </div>
+
+        <div class="proj-card" data-category="ai" style="--proj-accent: var(--accent-ai)">
+          <div class="proj-num">06 / AI</div>
+          <h3 class="proj-name">Prompt Sculptor</h3>
+          <p class="proj-desc">Iterative prompt engineering tool with semantic drift visualization.</p>
+          <div class="proj-footer">
+            <div class="project-tags"><span class="tag">LangChain</span><span class="tag">React</span></div>
+            <a href="#" class="proj-link" aria-label="View Prompt Sculptor project">View →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════ -->
+  <section id="skills" class="section" aria-labelledby="skills-title">
+    <div class="container">
+      <div class="section-label reveal">Expertise</div>
+      <h2 class="section-title reveal" id="skills-title">Tools & Skills</h2>
+
+      <div class="skills-grid stagger-children">
+        <!-- Web Dev -->
+        <div class="skill-card" data-domain="web">
+          <span class="skill-icon" aria-hidden="true">⬡</span>
+          <div class="skill-name">React / Next.js</div>
+          <div class="skill-type">Web Development</div>
+        </div>
+        <div class="skill-card" data-domain="web">
+          <span class="skill-icon" aria-hidden="true">◉</span>
+          <div class="skill-name">Node.js / APIs</div>
+          <div class="skill-type">Backend Development</div>
+        </div>
+        <div class="skill-card" data-domain="web">
+          <span class="skill-icon" aria-hidden="true">◻</span>
+          <div class="skill-name">Three.js / WebGL</div>
+          <div class="skill-type">Creative Web</div>
+        </div>
+        <!-- AI -->
+        <div class="skill-card" data-domain="ai">
+          <span class="skill-icon" aria-hidden="true">◈</span>
+          <div class="skill-name">PyTorch / TF</div>
+          <div class="skill-type">Machine Learning</div>
+        </div>
+        <div class="skill-card" data-domain="ai">
+          <span class="skill-icon" aria-hidden="true">✦</span>
+          <div class="skill-name">LLMs / Prompting</div>
+          <div class="skill-type">AI Engineering</div>
+        </div>
+        <div class="skill-card" data-domain="ai">
+          <span class="skill-icon" aria-hidden="true">⊕</span>
+          <div class="skill-name">Computer Vision</div>
+          <div class="skill-type">AI Research</div>
+        </div>
+        <!-- Film -->
+        <div class="skill-card" data-domain="film">
+          <span class="skill-icon" aria-hidden="true">🎞</span>
+          <div class="skill-name">Direction & Editing</div>
+          <div class="skill-type">Filmmaking</div>
+        </div>
+        <div class="skill-card" data-domain="film">
+          <span class="skill-icon" aria-hidden="true">🎬</span>
+          <div class="skill-name">Cinematography</div>
+          <div class="skill-type">Visual Storytelling</div>
+        </div>
+        <!-- Design -->
+        <div class="skill-card" data-domain="design">
+          <span class="skill-icon" aria-hidden="true">💎</span>
+          <div class="skill-name">Blender / Cinema4D</div>
+          <div class="skill-type">3D Art</div>
+        </div>
+        <div class="skill-card" data-domain="design">
+          <span class="skill-icon" aria-hidden="true">◑</span>
+          <div class="skill-name">Figma / UI Design</div>
+          <div class="skill-type">Product Design</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section id="contact" class="section" aria-labelledby="contact-title" style="background: var(--surface);">
+    <div class="container">
+      <div class="contact-inner">
+        <div>
+          <div class="section-label reveal">Let's Talk</div>
+          <h2 class="contact-heading reveal" id="contact-title">
+            Got a project<br />in mind? <em>Let's<br />build it.</em>
+          </h2>
+          <a href="mailto:yasir@pahadi.dev" class="contact-email reveal reveal-delay-1">
+            yasirpahadi@gmail.com
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <p class="reveal reveal-delay-2" style="max-width:400px">
+            Whether it's a web application, an AI experiment, a film project, 
+            or a design challenge — I'm always open to interesting work.
+          </p>
+        </div>
+
+        <div class="contact-socials reveal reveal-delay-2">
+          <a href="#" class="contact-social-link" aria-label="GitHub profile">
+            <div class="social-info">
+              <div>
+                <div class="social-platform">GitHub</div>
+                <div class="social-handle">@yasirpahadi</div>
+              </div>
+            </div>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="#" class="contact-social-link" aria-label="Twitter profile">
+            <div class="social-info">
+              <div>
+                <div class="social-platform">Twitter / X</div>
+                <div class="social-handle">@yasirpahadi</div>
+              </div>
+            </div>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="#" class="contact-social-link" aria-label="LinkedIn profile">
+            <div class="social-info">
+              <div>
+                <div class="social-platform">LinkedIn</div>
+                <div class="social-handle">Yasir Pahadi</div>
+              </div>
+            </div>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="#" class="contact-social-link" aria-label="Instagram profile">
+            <div class="social-info">
+              <div>
+                <div class="social-platform">Instagram</div>
+                <div class="social-handle">@yasirpahadi</div>
+              </div>
+            </div>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="#" class="contact-social-link" aria-label="YouTube channel">
+            <div class="social-info">
+              <div>
+                <div class="social-platform">YouTube</div>
+                <div class="social-handle">Yasir Pahadi</div>
+              </div>
+            </div>
+            <span class="social-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">Yasir Pahadi</div>
+        <p class="footer-copy">© 2025 Yasir Pahadi. Crafted with intention.</p>
+        <div class="footer-social">
+          <a href="#hero">Back to top ↑</a>
+          <a href="mailto:yasir@pahadi.dev">Email</a>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+
+  <!-- JS Modules -->
+  <script src="js/intro.js"></script>
+  <script src="js/cursor-effects.js"></script>
+  <script src="js/lighting.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
